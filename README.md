@@ -33,7 +33,7 @@
 3) https://blynk.cloud/external/api/update?token=YourAuthToken&V0=1 - **включить** устройство
 4) https://blynk.cloud/external/api/update?token=YourAuthToken&V2={value} - задание целевой температуры
 5) https://blynk.cloud/external/api/get?token=YourAuthToken&V3 - возвращает значения целевой температуры в формате json
-* Данные URL можно использовать в навыке [Домовенок Кузя](https://alexstar.ru/)
+**Данные URL можно использовать в навыке [Домовенок Кузя](https://alexstar.ru/)**
 
 <a id="chapter-4"></a>
 ## Библиотеки других авторов, используемые в проекте
