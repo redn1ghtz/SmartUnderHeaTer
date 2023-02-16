@@ -1,7 +1,7 @@
 # SmartUnderHeaTer
 
 ## Описание проекта
-**SmartUnderHeaTer** - прошивка для ESP8266, позволяющая создать умный контроллер для электрических тёпых полов с поддержкой удалённого контроля. Есть возможность добавления в Умный Дом Яндекса через навык "Домовенок Кузя".
+**SmartUnderHeaTer** - прошивка для ESP8266, позволяющая создать умный контроллер для электрических тёпых полов с поддержкой удалённого контроля. Есть возможность добавления в Умный Дом Яндекса через навык [Домовенок Кузя](https://alexstar.ru/).
 
 ### Схема
 ![SCHEME](https://github.com/redn1ghtz/SmartUnderHeaTer/blob/main/Pictures/SmartUnderHeaTer.png)
@@ -17,6 +17,15 @@
 6) На сайте **Blynk** в нашем новом устройстве выбираем "Информация об устройстве" и переносим TEMPLATE_ID, TEMPLATE_NAME и AUTH_TOKEN в скачанную прошивку (открываем и редактируем прошивку в Arduino IDE), вводим данные Wi-Fi соединения в соответствующее поле в прошивке, вместо "YourNetworkName" и "YourPassword".
 7) Прошиваемся в отредактированную прошивку и собираем всё по схеме.
 
-##### Библиотеки других авторов, используемые в проекте
+##### URL управления устройством, доступный из интернета
+**Вместо "YourAuthToken" в ссылке вставляем полученный AUTH_TOKEN в шаге 6 при настройке!**
+1) https://blynk.cloud/external/api/get?token=YourAuthToken&V1 - возвращает статус питания нагревателя в формате json
+2) https://blynk.cloud/external/api/update?token=YourAuthToken&V0=0 - **выключить** устройство
+3) https://blynk.cloud/external/api/update?token=YourAuthToken&V0=1 - **включить** устройство
+4) https://blynk.cloud/external/api/update?token=YourAuthToken&V2={value} - задание целевой температуры
+5) https://blynk.cloud/external/api/get?token=YourAuthToken&V3 - возвращает значения целевой температуры в формате json
+* Данные URL можно использовать в навыке [Домовенок Кузя](https://alexstar.ru/)
+
+###### Библиотеки других авторов, используемые в проекте
 * [Blynk C++ Library](https://github.com/blynkkk/blynk-library)
 * [GyverNTC](https://github.com/GyverLibs/GyverNTC)
