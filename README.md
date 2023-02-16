@@ -1,12 +1,20 @@
 # SmartUnderHeaTer
+* [Описание проекта](#chapter-0)
+* [Схема](#chapter-1)
+* [Настройка Blynk Cloud и прошивка](#chapter-2)
+* [URL управления устройством, доступный из интернета](#chapter-3)
+* [Библиотеки других авторов, используемые в проекте](#chapter-4)
 
+<a id="chapter-0"></a>
 ## Описание проекта
 **SmartUnderHeaTer** - прошивка для ESP8266, позволяющая создать умный контроллер для электрических тёпых полов с поддержкой удалённого контроля. Есть возможность добавления в Умный Дом Яндекса через навык [Домовенок Кузя](https://alexstar.ru/).
 
+<a id="chapter-1"></a>
 ### Схема
 ![SCHEME](https://github.com/redn1ghtz/SmartUnderHeaTer/blob/main/Pictures/SmartUnderHeaTer.png)
 **Один вывод реле подключаем к 220v, второй к нагревателю и соединяем оставшийся свободный провод нагревателя с 220v!**
 
+<a id="chapter-2"></a>
 #### Настройка Blynk Cloud и прошивка
 1) Переходим на сайт [Blynk](https://blynk.io/), входим в аккаунт или регистрируемся.
 2) После успешной авторизации переходим во вкладку "Шаблоны" и создаем новый с названием "SmartUnderHeaTer".
@@ -17,6 +25,7 @@
 6) На сайте **Blynk** в нашем новом устройстве выбираем "Информация об устройстве" и переносим TEMPLATE_ID, TEMPLATE_NAME и AUTH_TOKEN в скачанную прошивку (открываем и редактируем прошивку в Arduino IDE), вводим данные Wi-Fi соединения в соответствующее поле в прошивке, вместо "YourNetworkName" и "YourPassword".
 7) Прошиваемся в отредактированную прошивку и собираем всё по схеме.
 
+<a id="chapter-3"></a>
 ##### URL управления устройством, доступный из интернета
 **Вместо "YourAuthToken" в ссылке вставляем полученный AUTH_TOKEN в шаге 6 при настройке!**
 1) https://blynk.cloud/external/api/get?token=YourAuthToken&V1 - возвращает статус питания нагревателя в формате json
@@ -26,6 +35,7 @@
 5) https://blynk.cloud/external/api/get?token=YourAuthToken&V3 - возвращает значения целевой температуры в формате json
 * Данные URL можно использовать в навыке [Домовенок Кузя](https://alexstar.ru/)
 
+<a id="chapter-4"></a>
 ###### Библиотеки других авторов, используемые в проекте
 * [Blynk C++ Library](https://github.com/blynkkk/blynk-library)
 * [GyverNTC](https://github.com/GyverLibs/GyverNTC)
