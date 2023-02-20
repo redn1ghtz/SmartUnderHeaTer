@@ -22,7 +22,8 @@
 ![SETTINGS](https://github.com/redn1ghtz/SmartUnderHeaTer/blob/main/Pictures/blynkset.jpg)
 4) Во вкладке "Поиск" создаем новое устройство из шаблона "SmartUnderHeaTer", также применяем изменения.
 5) Скачиваем и устанавливаем библиотеки [Blynk C++ Library](https://github.com/blynkkk/blynk-library) и [GyverNTC](https://github.com/GyverLibs/GyverNTC) в Arduino IDE. Также, если у Вас не установлены платы ESP8266, то устанавливаем их в Arduino IDE (дополнительную информацию можно найти в Интернете).
-6) На сайте **Blynk** в нашем новом устройстве выбираем "Информация об устройстве" и переносим TEMPLATE_ID, TEMPLATE_NAME и AUTH_TOKEN в скачанную прошивку (открываем и редактируем прошивку в Arduino IDE), вводим данные Wi-Fi соединения в соответствующее поле в прошивке, вместо "YourNetworkName" и "YourPassword".
+6) На сайте **Blynk** в нашем новом устройстве выбираем "Информация об устройстве" и переносим TEMPLATE_ID, TEMPLATE_NAME и AUTH_TOKEN в скачанную прошивку (открываем и редактируем прошивку в Arduino IDE), вводим данные Wi-Fi соединения в соответствующее поле в прошивке, вместо "YourNetworkName" и "YourPassword". Меняем параметры сопротивления резистора и теплового коэффициента в зависимости от термистора. Пример на фото ниже:
+![SETTINGS](https://github.com/redn1ghtz/SmartUnderHeaTer/blob/main/Pictures/Thermistor_set.png)
 7) Прошиваемся в отредактированную прошивку и собираем всё по схеме.
 
 <a id="chapter-3"></a>
@@ -33,7 +34,7 @@
 3) https://blynk.cloud/external/api/update?token=YourAuthToken&V0=1 - **включить** устройство
 4) https://blynk.cloud/external/api/update?token=YourAuthToken&V2={value} - задание целевой температуры
 5) https://blynk.cloud/external/api/get?token=YourAuthToken&V3 - возвращает значения целевой температуры в формате json
-Данные URL можно использовать в навыке [Домовенок Кузя](https://alexstar.ru/)
+* Данные URL можно использовать в навыке [Домовенок Кузя](https://alexstar.ru/)
 
 <a id="chapter-4"></a>
 ## Библиотеки других авторов, используемые в проекте
